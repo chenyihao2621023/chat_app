@@ -1,0 +1,22 @@
+@import "./variable.styl"
+@import "./mixin.styl"
+.chat
+  height: 100%
+  display: flex
+  flex-direction: column
+  .chat-content
+    flex: 1
+    display: flex
+    flex-direction: column
+  .chat-fooder
+    position: relative
+    height: 34%
+    overflow: hidden
+    transition: all .2s
+    border-top-1px(#E4E4E4)
+    &.fade-enter
+      height: 0
+    &.fade-leave
+      height: 0
+    &.fade-enter.fade-enter-active
+      height: 34%

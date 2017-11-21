@@ -1,0 +1,60 @@
+@import "./variable.styl"
+@import "./mixin.styl"
+.slide
+  min-height: 1px
+  .slide-group
+    position: relative
+    overflow: hidden
+    white-space: nowrap
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    .slide-item
+      box-sizing: border-box
+      overflow: hidden
+  .emoji-btn
+    width: 56px
+    position: absolute
+    right: 24px
+    height: 30px
+    bottom: 0.6rem
+    color: #858489
+    flex-center(,space-between)
+    .emoji-delete
+      color: #858489
+      border-radius: 4px
+      line-height: 20px
+      text-align: center
+      height: 20px
+      width: 20px
+      font-size: 1.2rem
+      padding: 1px
+      &::before
+        content: "\2716"
+    .emoji-send
+      height: 20px
+      line-height: 20px
+      margin-top: 2px
+      padding-left: 6px
+      border-left: 1px solid #E4E4E6
+      font-size: 1rem
+  .dots
+    position: absolute
+    right: 0
+    left: 0
+    bottom: 0.2rem
+    transform: translateZ(1px)
+    text-align: center
+    font-size: 0
+    .dot
+      display: inline-block
+      margin: 0 4px
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background: $color-light-grey-s
+      &.active
+        width: 20px
+        border-radius: 5px
+        background: $color-white
